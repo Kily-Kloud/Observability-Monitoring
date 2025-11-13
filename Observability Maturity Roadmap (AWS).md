@@ -24,16 +24,16 @@
      - ✅ Alerting
           - Basic CloudWatch Alarms + SNS for CPU/memory thresholds.
 
-     - Tool Choices
-          - Metrics: CloudWatch, AMP
-          - Logs: CloudWatch Logs
-          - Visualization: Amazon Managed Grafana
-          - Alerting: SNS, CloudWatch Alarms
+- Tool Choices
+     - Metrics: CloudWatch, AMP
+     - Logs: CloudWatch Logs
+     - Visualization: Amazon Managed Grafana
+     - Alerting: SNS, CloudWatch Alarms
 
-     - Ownership Milestones
-          - Platform Team owns data pipeline setup (exporters, Grafana)
-          - Infra team owns CloudWatch metrics/alarms
-          - App teams start pushing app metrics/logs
+- Ownership Milestones
+     - Platform Team owns data pipeline setup (exporters, Grafana)
+     - Infra team owns CloudWatch metrics/alarms
+     - App teams start pushing app metrics/logs
       
 ## Phase 2 — Centralization & Standardization (Quarter 2)
 - Goal: Unify observability data and enforce standards across services. 
@@ -50,14 +50,14 @@
      - ✅ Alerting
           - Integrate alert routing to PagerDuty / OpsGenie / Slack.
           - Begin defining SLO-based alerting (e.g., latency > p95 threshold). 
-     - Tool Choices
-          - Logs: CloudWatch → OpenSearch/Loki
-          - Traces: AWS X-Ray or OpenTelemetry Collector
-          - Alerts: PagerDuty / OpsGenie
-          - Visualization: Grafana (standard dashboards)
-     - Ownership Milestones
-          - Platform team owns observability standards & CI/CD templates.
-          - Application teams instrument traces.
-          - SRE team starts tracking alert quality and noise.
+- Tool Choices
+     - Logs: CloudWatch → OpenSearch/Loki
+     - Traces: AWS X-Ray or OpenTelemetry Collector
+     - Alerts: PagerDuty / OpsGenie
+     - Visualization: Grafana (standard dashboards)
+- Ownership Milestones
+     - Platform team owns observability standards & CI/CD templates.
+     - Application teams instrument traces.
+     - SRE team starts tracking alert quality and noise.
 
 
