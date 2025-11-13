@@ -13,35 +13,34 @@
 
 
 ## Key Building Blocks to Mature the Platform
-- Focus
-A. Data Collection
+- A. Data Collection
      - Metrics: Prometheus (Amazon Managed Prometheus), CloudWatch metrics
      - Logs: CloudWatch Logs, FluentBit → OpenSearch / Loki
      - Traces: AWS X-Ray or OpenTelemetry Collector
      - Events: AWS EventBridge, CloudTrail
 
-B. Data Aggregation
+- B. Data Aggregation
      - Standardize naming and labels (e.g., service, env, region)
      - Use OpenTelemetry collectors for uniform data ingestion
      - Use AWS Kinesis / Firehose for scalable streaming pipelines if needed
 
-C. Visualization & Dashboards
+- C. Visualization & Dashboards
      - Amazon Managed Grafana (dashboards for infra, apps, SLOs)
      - Tag-based dashboard automation (discover new services dynamically)
      - Create templates per environment/team
 
-D. Alerting & Incident Management
+- D. Alerting & Incident Management
      - Unified alert routing via AWS SNS or PagerDuty/OpsGenie
      - Define alert policies based on SLOs (not raw metrics)
      - Integrate alerts → JIRA, Slack, or ServiceNow
      - Implement auto-remediation with Lambda or AWS Systems Manager Automation
 
-E. Tracing & Context
+- E. Tracing & Context
      - Instrument services using OpenTelemetry SDK
      - Enable service dependency maps and trace correlation with logs
      - Use X-Ray ServiceLens or Grafana Tempo for tracing visualization
 
-F. SLO / SLA / SLI Management
+- F. SLO / SLA / SLI Management
      - Define reliability targets: latency, error rate, availability
      - Use PromQL-based SLOs (e.g., error budget burn rate)
      - Dashboards for business and reliability metrics
