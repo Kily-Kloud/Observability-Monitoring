@@ -13,7 +13,7 @@
 
 
 ## Key Building Blocks to Mature the Platform
-
+- Focus
 A. Data Collection
      - Metrics: Prometheus (Amazon Managed Prometheus), CloudWatch metrics
      - Logs: CloudWatch Logs, FluentBit → OpenSearch / Loki
