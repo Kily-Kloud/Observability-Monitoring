@@ -56,10 +56,8 @@
           - Alerts: PagerDuty / OpsGenie
           - Visualization: Grafana (standard dashboards)
      - Ownership Milestones
-            - Platform team owns observability standards & CI/CD templates.
-            - Application teams instrument traces.
-            - SRE team starts tracking alert quality and noise.
+          - Platform team owns observability standards & CI/CD templates.
+          - Application teams instrument traces.
+          - SRE team starts tracking alert quality and noise.
 
 
-
-SRE team starts tracking alert quality and noise.
