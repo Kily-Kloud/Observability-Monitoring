@@ -3,7 +3,7 @@
 ## Phase 1 — Foundation
 - Goal: Establish core observability across infrastructure and applications.
 - Technical Actions
-     ✅ Metrics
+     - ✅ Metrics
           - Enable Amazon CloudWatch metrics for EC2, RDS, EKS, ALB, etc.
           - Deploy Amazon Managed Prometheus (AMP).
           - Install Prometheus exporters:
@@ -11,17 +11,17 @@
           - kube-state-metrics & cAdvisor (EKS)
           - AWS CloudWatch Exporter for AWS service metrics
 
-     ✅ Logs
+     - ✅ Logs
           - Centralize logs with CloudWatch Logs.
           - Standardize log format (JSON preferred).
           - Enable VPC Flow Logs, ALB/ELB Logs, Lambda Logs.
      
-     ✅ Visualization
+     - ✅ Visualization
           - Deploy Amazon Managed Grafana (AMG).
           - Integrate Grafana → AMP + CloudWatch as data sources.
           - Create base dashboards (infra, app, network, database).
 
-     ✅ Alerting
+     - ✅ Alerting
           - Basic CloudWatch Alarms + SNS for CPU/memory thresholds.
 
      - Tool Choices
