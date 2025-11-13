@@ -35,6 +35,31 @@
           - Infra team owns CloudWatch metrics/alarms
           - App teams start pushing app metrics/logs
       
+## Phase 2 — Centralization & Standardization (Quarter 2)
+- Goal: Unify observability data and enforce standards across services. 
+- Technical Actions
+     - ✅ Central Data Pipeline
+          - Implement FluentBit or FluentD → ship logs to OpenSearch or Loki.
+          Integrate with Amazon Kinesis Firehose for scalability (optional).
+     - ✅ Standardization
+          - Define naming conventions for metrics (service, env, region).
+          - Define standard labels and dashboards templates.
+     - ✅ Tracing
+          - Introduce AWS X-Ray or OpenTelemetry Collector for distributed tracing.
+          - Instrument 2–3 core services for tracing.
+     - ✅ Alerting
+          - Integrate alert routing to PagerDuty / OpsGenie / Slack.
+          - Begin defining SLO-based alerting (e.g., latency > p95 threshold). 
+     - Tool Choices
+          - Logs: CloudWatch → OpenSearch/Loki
+          - Traces: AWS X-Ray or OpenTelemetry Collector
+          - Alerts: PagerDuty / OpsGenie
+          - Visualization: Grafana (standard dashboards)
+     - Ownership Milestones
+            - Platform team owns observability standards & CI/CD templates.
+            - Application teams instrument traces.
+            - SRE team starts tracking alert quality and noise.
 
- 
-- 
+
+
+SRE team starts tracking alert quality and noise.
